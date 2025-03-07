@@ -17,7 +17,7 @@ public class Car extends Vehicle {
    public Car(int numWheels, double avgSpeed, String color, int numSeats, String carBrand){
     //Must call super() FIRST
     //before setting up the other vars
-    super(numWheels, avgSpeed, color)
+    super(numWheels, avgSpeed, color);
     this.numSeats = numSeats;
     this.carBrand = brand;
    }
