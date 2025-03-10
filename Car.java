@@ -8,7 +8,7 @@ public class Car extends Vehicle {
 
    //Constructors are not inheirited!
 
-   public Car(int numSeats, String carBrand){
+   public Car(){
     super(); // Call to super class
     this.numSeats = 5;
     this.carBrand = "Vroom";
@@ -19,7 +19,20 @@ public class Car extends Vehicle {
     //before setting up the other vars
     super(numWheels, avgSpeed, color);
     this.numSeats = numSeats;
-    this.carBrand = brand;
+    this.carBrand = carBrand;
    }
 
+   public String toString() {
+      return ("Vehicle[numWheels:" + this.getNumWheels() + ", avgSpeed:" + this.getAvgSpeed() + ", color:" + this.getColor() +  ", numSeats" + this.numSeats + ", carBrand" + this.carBrand + "]" );
+         }
+
 }
+
+//OVERIDE parent method
+public void makeNoise() {
+   // USE super.method to call the paent's method FIRST
+   super.makeNoise();
+   //Then add on to that behavior
+   System.out.println("Beep BOOP");
+}
+
