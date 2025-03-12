@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
 
    public static void main(String []args) {
@@ -16,6 +18,31 @@ public class Main {
 
 // Test behavior methods
       v2.makeNoise();
-      c2.makeNoise(); 
+      c2.makeNoise(); // OVERIDE PARENT METHOD
+
+
+         //POLYMORPHISM example:
+         //all classes in a hierarchy can be treated as
+         // instances of the TOP (must super) type
+         Vehicle v3 = new Vehicle();
+         Vehicle c3 = new Car();
+         //Car bad = new Vehicle(); // Car IS-A type of vehicle
+
+         Vehicle scoot = new Scooter();
+         Vehicle moto = new Motorcycle();
+         Vehicle voncertable = new Convertable();
+
+         // POLYMORPHISM example:
+         // Can store any subclass in a super class-type collection
+         ArrayList<Vehicle> vehicleList = new ArrayList<Vehicle>();
+         vehicleList.add(v1);
+         vehicleList.add(v2);
+         vehicleList.add(v3);
+         vehicleList.add(c1);
+         vehicleList.add(c2);
+         vehicleList.add(c3);
+         vehicleList.add(moto);
+         vehicleList.add(scoot);
+         System.out.println(vehicleList);
    }
 }
